@@ -1,0 +1,19 @@
+{
+    "name": "Chenghao Li",
+    "short_name": "Chenghao Li",
+    "icons": [
+       {
+          "src": "/images/chenghao-li.jpg",
+          "sizes": "403x604",
+          "type": "image/jpeg"
+       },
+       {
+        "src": "/images/chenghao-li.jpg",
+        "sizes": "403x604",
+        "type": "image/jpeg"
+        }
+    ],
+    "theme_color": "#FFFFFF",
+    "background_color": "#FFFFFF",
+    "display": "standalone"
+ }

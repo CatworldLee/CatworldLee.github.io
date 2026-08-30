@@ -1,0 +1,102 @@
+.pets-photo-trigger-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: baseline;
+}
+
+.pets-photo-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 0.08em;
+  color: inherit;
+  font: inherit;
+  line-height: 1;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 160ms ease, background-color 160ms ease;
+}
+
+.pets-photo-trigger:hover {
+  transform: translateY(-1px) scale(1.06);
+}
+
+.pets-photo-trigger:focus-visible {
+  outline: 2px solid #224b8d;
+  outline-offset: 3px;
+}
+
+.pets-photo-popover {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 12px);
+  z-index: 30;
+  display: block;
+  width: min(320px, calc(100vw - 32px));
+  padding: 8px;
+  color: #494e52;
+  font-size: 0.62em;
+  font-weight: normal;
+  line-height: 1.35;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e4e6e8;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px) scale(0.98);
+  transform-origin: left bottom;
+  pointer-events: none;
+  transition: opacity 170ms ease, transform 170ms ease, visibility 170ms ease;
+}
+
+.pets-photo-popover img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin: 0;
+  object-fit: cover;
+  object-position: center 88%;
+  border-radius: 5px;
+}
+
+.pets-photo-caption {
+  display: block;
+  padding: 7px 4px 1px;
+  white-space: nowrap;
+}
+
+.pets-photo-trigger-wrap.is-open .pets-photo-popover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pets-photo-trigger-wrap:hover .pets-photo-popover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pets-photo-popover {
+    left: -4px;
+    width: min(290px, calc(100vw - 36px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pets-photo-trigger,
+  .pets-photo-popover {
+    transition: none;
+  }
+}

@@ -1,0 +1,18 @@
+.citation-tag {
+  display: inline-block;
+  padding: 1px 8px;
+  color: #6b5424;
+  font-size: 0.8em;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  background-color: #f3e8c8;
+  border: 1px solid #e2cf98;
+  border-radius: 5px;
+}
+
+a.citation-tag:hover {
+  color: #4e3d1c;
+  text-decoration: none;
+  background-color: #ead9aa;
+}
